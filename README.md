@@ -18,7 +18,7 @@ A local instance of MongoDB compass is needed to test all routes of the API.
 
 ## Usage
 
-Once instance of compass is launched, the API routes allow for the adding, updating, and deleting of users, friends, thoughts, and reactions to simulate the storage of basic social networking information.
+Once an instance of compass is launched, the API routes allow for the adding, updating, and deleting of users, friends, thoughts, and reactions to simulate the storage of basic social networking information. A video demonstration of all routes can be found [here](https://drive.google.com/file/d/1yBJNu3ZpfkxCdPaO9OvhlaCyWJENxWIF/view).
 
 ## Contributing
 
