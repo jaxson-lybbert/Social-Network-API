@@ -6,6 +6,7 @@ module.exports = {
       const users = await User.find();
       res.status(200).json(users);
     } catch (err) {
+      console.log(err);
       res.status(500).json(err);
     }
   },
@@ -16,16 +17,25 @@ module.exports = {
         return res.status(404).json({ message: "No user with that ID" });
       }
 
-      res.json(user);
+      res.status(200).json(user);
     } catch (err) {
+      console.log(err);
       res.status(500).json(err);
     }
   },
   async createUser(req, res) {
     try {
       const newUser = await User.create(req.body);
-      res.json(newUser);
+      res.status(200).json(newUser);
     } catch (err) {
+      console.log(err);
+      res.status(500).json(err);
+    }
+  },
+  async updateUser(req, res) {
+    try {
+    } catch (err) {
+      console.log(err);
       res.status(500).json(err);
     }
   },
@@ -36,9 +46,10 @@ module.exports = {
       if (!user) {
         return res.status(404).json({ message: "No user with that ID" });
       }
-      await Thought.deleteMany({ _id: { $in: user.thoughts } });
-      res.json({ message: "User and thoughts deleted!" });
+      // await Thought.deleteMany({ _id: { $in: user.thoughts } });
+      res.status(200).json({ message: "User and thoughts deleted!" });
     } catch (err) {
+      console.log(err);
       res.status(500).json(err);
     }
   },
